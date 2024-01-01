@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="findday">Select the date:</label>
+    <input type="date" id="findday" name="findday"> 
+    <label for="today">Current date:</label>
+    <input type="text" id="show" name="show" readonly>
+    <script>
+        document.getElementById("findday").addEventListener("change", function() {
+            let selectedDate = new Date(this.value);
+            let currentDate = new Date();
+
+            // Set hours, minutes, seconds, and milliseconds to 0 for date-only comparison
+            currentDate.setHours(0, 0, 0, 0);
+            selectedDate.setHours(0, 0, 0, 0)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            if (selectedDate < currentDate) {
+                alert("Before Today");
+            } else if (selectedDate <= currentDate) {  // Adjusted condition here
+                alert("Today");
+            } else {
+                alert("After Today");
+            }
+        });
+
+        let currentDate = new Date().toLocaleDateString();
+        document.getElementById("show").value = currentDate;
+        console.log(currentDate);
+    </script>
+</body>
+</html>

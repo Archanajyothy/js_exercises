@@ -1,0 +1,35 @@
+<!-- Create a string parsing calculator.
+
+for eg : Create a input field that takes input "((3plus5minus2)dividedby2)multipliedby4" as a string and returns the result 12 by doing the operation ((3 + 5 - 2) / 2) * 4.
+
+The calculator should be able to take any order of operators ( 'plus', 'minus', 'multipliedby', 'dividedby' ). All results should be whole numbers ( 1, 2 ,3 ... ) by rounding to the next whole number. The datatype of the result should be a javascript number.
+*/
+var userInput = prompt("Enter the string for calculation...")
+console.log(userInput); 
+
+((3plus5minus2)dividedby2)multipliedby4
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js exercise</title>
+</head>
+<body>
+    <script>
+        let sum = 0
+        var userInput = prompt("Enter the string for calculation...");
+        console.log(userInput);
+        userInput = userInput.replaceAll("plus","+")
+        userInput=userInput.replaceAll("minus","-")
+        userInput =  userInput.replaceAll("dividedby","/")
+        userInput = userInput.replaceAll("multipliedby", "*")
+        console.log(typeof(userInput));
+        sum = parseInt(eval(userInput))
+        console.log(sum);
+         
+    </script>
+</body>
+</html>

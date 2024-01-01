@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background: aquamarine;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            text-align: center;
+        }
+        .box{
+            background: palevioletred;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+        }
+
+        @media (max-width: 76s8x) {
+            .flex-container {
+                flex-direction: column;
+                height: auto;
+                justify-content: space-around;
+            }
+            .box{
+                height: 50px;
+                width: 100%;
+                justify-content: space-around;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+</body>
+</html>
